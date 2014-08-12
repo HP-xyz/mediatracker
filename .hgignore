@@ -1,0 +1,14 @@
+# Ignore file for Visual Studio 2008
+
+# use glob syntax
+syntax: glob
+
+nbproject
+
+syntax: regexp
+
+\d+.jpeg
+_pycache_
+
+#Ignora all mal_lists
+mal_list.xml
