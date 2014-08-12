@@ -5,10 +5,12 @@ Created on 17 Jan 2012
 '''
 import logging
 import configparser
-from PyQt4.QtCore import *
+
+from PyQt5.QtCore import *
 
 from core.plugins import Host
 from core.media import MAL_Anime
+
 
 class MAL(Host.Host):
     '''

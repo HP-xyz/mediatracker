@@ -2,8 +2,11 @@ __author__="dvorak"
 __date__ ="$Dec 17, 2011 10:45:35 PM$"
 import logging
 import configparser
-from PyQt4.QtNetwork import *
-from PyQt4.QtCore import *
+
+from PyQt5.QtNetwork import *
+from PyQt5.QtCore import *
+
+
 class NetworkHandler(QThread):
     progress_signal = pyqtSignal(int, name='progressUpdate')
     download_complete_signal = pyqtSignal(str, str, name='downloadComplete')

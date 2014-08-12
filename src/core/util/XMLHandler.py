@@ -13,7 +13,9 @@ import logging
 import configparser
 import xml.etree.ElementTree as etree
 import codecs
-from PyQt4.QtCore import *
+
+from PyQt5.QtCore import *
+
 
 #from core import Anime
 

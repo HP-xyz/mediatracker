@@ -1,7 +1,11 @@
 import logging
 import configparser
-from PyQt4.QtCore import QObject, pyqtSignal,  pyqtSlot
+
+from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot
+
 from core.util import XMLHandler, NetworkHandler
+
+
 class Host(QObject):
     """
     Base class for all media classes. Defines interface and abstract

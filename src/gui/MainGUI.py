@@ -3,9 +3,12 @@ __date__ ="$Dec 18, 2011 12:27:15 PM$"
 import sys
 import logging
 import configparser
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
-from PyQt4.uic import loadUi
+
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+from PyQt5.uic import loadUi
+
 
 class MainGUI(QObject):
     display_label_signal = pyqtSignal(str, name="display_label")
@@ -30,7 +33,7 @@ class MainGUI(QObject):
         # Read and assign config
         self.config = configparser.ConfigParser()
         try:
-            self.config.readfp(open('./config.conf'))
+            self.config.read_file(open('./config.conf'))
             self.logger_gui.debug(" -- Successfully opened config file")
         except:
             self.logger_gui.error("Could not read ./config.conf")
