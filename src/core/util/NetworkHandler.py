@@ -16,11 +16,11 @@ class NetworkHandler(threading.Thread):
         #self.config.read_file(open('./config.conf'))
 
     def DoGet(self, url, user=None, password=None):
-        proxy = urllib.request.ProxyHandler({'http': r''})
+        proxy = urllib.request.ProxyHandler({'http': r'bbdnet1289:aoeuidhtns8@proxy.bbdnet.bbd.co.za:8080'})
         auth = urllib.request.HTTPBasicAuthHandler()
         opener = urllib.request.build_opener(proxy, auth, urllib.request.HTTPHandler)
-        request = opener.open(url)
-        response = request.read()
+        networkRequest = opener.open(url)
+        response = networkRequest.read()
         self.Callback(response)
 
 if __name__ == "__main__":
